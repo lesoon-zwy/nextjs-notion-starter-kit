@@ -44,18 +44,23 @@
   justify-content: center;
 }
 
-.notion-asset-wrapper-image:first-child {
+.notion-asset-wrapper-image figure {
   padding: 1rem 1.7rem;
   border-radius: 0.75rem;
   border: .0625rem solid #EAEEF2;
   height: 13rem;
 }
 
-.notion-asset-wrapper-image:first-child:hover {
+.notion-asset-wrapper-image figure:hover {
   border-color: #1869ED;
   background-color: #E6F4FF;
   transition: opacity 0.3s;
   cursor: pointer;
+}
+
+.notion-asset-wrapper-image figure div {
+  width: 8rem;
+  height: 8rem;
 }
 
 .notion-asset-wrapper img {
