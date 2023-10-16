@@ -44,6 +44,12 @@
   justify-content: center;
 }
 
+.notion-asset-wrapper-image:first-child {
+  padding: 1.7rem;
+  border-radius: 0.75rem;
+  border: .0625rem solid #EAEEF2;
+}
+
 .notion-asset-wrapper-video > div,
 .notion-asset-wrapper-video video {
   width: 100% !important;
