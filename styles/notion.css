@@ -7,6 +7,10 @@
  * places to add some flare.
  */
 
+:root {
+  --notion-font: Inter,-apple-system,BlinkMacSystemFont,PingFang SC,Hiragino Sans GB,noto sans,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
 .notion {
   --notion-max-width: 720px;
   --notion-header-height: 54px;
