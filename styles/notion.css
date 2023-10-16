@@ -176,6 +176,10 @@
   text-align: center;
 }
 
+.notion-row .notion-column {
+    width: 100% !important;
+}
+
 .notion-collection-row {
   padding-bottom: 1em;
 }
