@@ -53,7 +53,7 @@
 .notion-asset-wrapper-image:first-child:hover {
   border-color: #1869ED;
   background-color: #E6F4FF;
-  transition: 300ms;
+  transition: opacity 0.3s;
   cursor: pointer;
 }
 
