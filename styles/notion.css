@@ -54,7 +54,7 @@
 .notion-asset-wrapper-image:hover {
   border-color: #1869ED;
   background-color: #E6F4FF;
-  transition: opacity 0.3s;
+  transform: opacity 0.3s;
   cursor: pointer;
 }
 
