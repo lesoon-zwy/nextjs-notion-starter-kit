@@ -72,6 +72,11 @@
   text-overflow: unset;
 }
 
+.notion-collection-card-property:first-child {
+  font-size: 12px;
+  font-weight: 300;
+}
+
 .notion-gallery-grid .notion-property-text {
   font-size: 14px;
 }
