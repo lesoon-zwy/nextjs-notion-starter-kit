@@ -59,7 +59,7 @@
 }
 
 .notion-asset-wrapper img {
-  object-fit: contain;
+  object-fit: contain !important;
 }
 
 .notion-asset-wrapper-video > div,
