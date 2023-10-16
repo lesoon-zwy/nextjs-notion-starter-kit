@@ -2,7 +2,7 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: '00aa573258ee4da7afecdc46348389b7?v=693f4e4b6afa465eb085a42a8a474998',
+  rootNotionPageId: '1d665f5fb9f6421ca69721112717c5e4',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
@@ -10,7 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: '丽迅素材库',
-  domain: 'https://www.notion.so/lesoon/00aa573258ee4da7afecdc46348389b7?v=693f4e4b6afa465eb085a42a8a474998',
+  domain: 'https://www.notion.so/lesoon/1d665f5fb9f6421ca69721112717c5e4',
   author: 'ZWY',
 
   // open graph metadata (optional)
@@ -27,7 +27,7 @@ export default siteConfig({
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
   defaultPageIcon: null,
-  defaultPageCover: null,
+  defaultPageCover: true,
   defaultPageCoverPosition: 0.5,
 
   // whether or not to enable support for LQIP preview images (optional)
