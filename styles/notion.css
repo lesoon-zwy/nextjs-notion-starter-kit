@@ -50,9 +50,18 @@
   border: .0625rem solid #EAEEF2;
 }
 
+.notion-asset-wrapper-image:first-child:hover {
+  border-color: #1869ED;
+  background-color: #E6F4FF;
+}
+
 .notion-asset-wrapper-video > div,
 .notion-asset-wrapper-video video {
   width: 100% !important;
+}
+
+.notion-spacer {
+  display: none;
 }
 
 .notion-nav-header-rhs {
