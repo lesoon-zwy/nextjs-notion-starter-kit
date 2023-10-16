@@ -58,7 +58,7 @@
   cursor: pointer;
 }
 
-.notion-asset-wrapper-image div {
+.notion-asset-wrapper-image div span {
   width: 8rem;
   height: 8rem;
 }
