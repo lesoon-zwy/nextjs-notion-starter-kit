@@ -187,7 +187,8 @@
 }
 
 .notion-row .notion-column {
-    width: 100% !important;
+  width: 100% !important;
+  grid-area: span 1/span 2/span 1/span 4;
 }
 
 .notion-collection-row {
