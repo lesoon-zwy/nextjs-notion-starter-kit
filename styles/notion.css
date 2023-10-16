@@ -53,6 +53,8 @@
 .notion-asset-wrapper-image:first-child:hover {
   border-color: #1869ED;
   background-color: #E6F4FF;
+  transition: 300ms;
+  cursor: pointer;
 }
 
 .notion-asset-wrapper-video > div,
