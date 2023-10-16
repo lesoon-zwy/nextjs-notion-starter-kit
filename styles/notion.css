@@ -45,9 +45,10 @@
 }
 
 .notion-asset-wrapper-image:first-child {
-  padding: 1.7rem;
+  padding: 1rem 1.7rem;
   border-radius: 0.75rem;
   border: .0625rem solid #EAEEF2;
+  height: 13rem;
 }
 
 .notion-asset-wrapper-image:first-child:hover {
@@ -55,6 +56,10 @@
   background-color: #E6F4FF;
   transition: opacity 0.3s;
   cursor: pointer;
+}
+
+.notion-asset-wrapper img {
+  object-fit: contain;
 }
 
 .notion-asset-wrapper-video > div,
