@@ -58,13 +58,16 @@
   cursor: pointer;
 }
 
-.notion-asset-wrapper-image div span {
+/* .notion-asset-wrapper-image div span {
   width: 8rem !important;
   height: 8rem !important;
 }
+*/
 
 .notion-asset-wrapper img {
   object-fit: contain !important;
+  width: 8rem !important;
+  height: 8rem !important;
 }
 
 .notion-asset-wrapper-video > div,
