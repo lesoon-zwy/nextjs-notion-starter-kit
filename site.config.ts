@@ -50,12 +50,12 @@ export default siteConfig({
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages
-  navigationStyle: 'default'
+  navigationStyle: 'default',
   navigationStyle: 'custom',
   navigationLinks: [
   {
        title: '设计规范',
        pageId: 'c72458724345427b8744bdaf199a5750'
      }
-  ]
+    ]
 })
