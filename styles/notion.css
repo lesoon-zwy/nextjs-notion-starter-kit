@@ -54,7 +54,7 @@
 .notion-asset-wrapper-image:hover {
   border-color: #1869ED;
   background-color: #E6F4FF;
-  transform: opacity 0.3s;
+  transition: transform opacity 0.3s;
   cursor: pointer;
 }
 
@@ -70,6 +70,10 @@
 .notion-asset-wrapper-video > div,
 .notion-asset-wrapper-video video {
   width: 100% !important;
+}
+
+.medium-zoom-image--opened {
+  width: auto !important;
 }
 
 .notion-spacer {
