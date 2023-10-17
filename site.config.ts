@@ -56,6 +56,6 @@ export default siteConfig({
   {
        title: '设计规范',
        pageId: 'c72458724345427b8744bdaf199a5750'
-     }
+     },
     ]
 })
