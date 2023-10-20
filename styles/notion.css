@@ -7,6 +7,7 @@
  * places to add some flare.
  */
 
+/*
 :root {
   --notion-font: Inter,-apple-system,BlinkMacSystemFont,PingFang SC,Hiragino Sans GB,noto sans,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
   --notion-max-width: 75rem;
@@ -64,6 +65,7 @@
 }
 */
 
+/*
 .notion-asset-wrapper img {
   object-fit: contain !important;
   width: 8rem !important;
@@ -134,6 +136,7 @@
   /*box-shadow: 2px 2px 8px 4px rgba(15, 15, 15, 0.1);*/
 }
 
+/*
 .notion-collection-card-cover {
   border-bottom: 0 none;
   transition: filter 150ms linear;
@@ -149,6 +152,7 @@
 }
 
 /* only target safari */
+/*
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   _::-webkit-full-page-media,
   _:future,
@@ -307,6 +311,7 @@
   background-color: none;
 
   /* light yellow */
+/*
   background-image: linear-gradient(
     119deg,
     var(--bg-color),
@@ -331,6 +336,7 @@
 .notion-blue_background,
 .notion-gray_background {
   /* light blue */
+  /*
   background-image: linear-gradient(
     119deg,
     var(--bg-color),
@@ -343,6 +349,7 @@
 .notion-red_background,
 .notion-orange_background {
   /* light red */
+  /*
   background-image: linear-gradient(
     119deg,
     var(--bg-color),
@@ -354,6 +361,7 @@
 
 .notion-teal_background {
   /* light green */
+  /*
   background-image: linear-gradient(
     119deg,
     var(--bg-color),
@@ -365,6 +373,7 @@
 
 .notion-brown_background {
   /* dark blue */
+  /*
   background-image: linear-gradient(
     119deg,
     var(--bg-color),
@@ -375,6 +384,7 @@
 }
 
 /* disable highlighting in dark mode */
+  /*
 .dark-mode .notion-red_background,
 .dark-mode .notion-pink_background,
 .dark-mode .notion-blue_background,
@@ -391,6 +401,7 @@
 }
 
 /* if you don't want rounded page icon images, remove this */
+  /*
 .notion-page-icon-hero.notion-page-icon-image {
   border-radius: 50%;
   box-shadow: 0 8px 40px 0 rgb(0 0 0 / 21%);
@@ -412,7 +423,8 @@
 }
 
 /* Workaround for Firefox not supporting backdrop-filter yet */
-@-moz-document url-prefix() {
+/*
+  @-moz-document url-prefix() {
   .dark-mode .notion-header {
     background: hsla(203, 8%, 20%, 0.8);
   }
@@ -430,3 +442,4 @@
 .notion-block-260baa77f1e1428b97fb14ac99c7c385 {
   display: none;
 }
+*/
