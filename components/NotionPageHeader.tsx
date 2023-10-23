@@ -92,7 +92,7 @@ export const NotionPageHeader: React.FC<{
               }
             })
             .filter(Boolean)}
-
+<ToggleThemeButton />
            <div className={styles.settings}>
         {hasMounted && (
           <a
