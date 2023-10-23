@@ -38,7 +38,13 @@ export const NotionPageHeader: React.FC<{
   block: types.CollectionViewPageBlock | types.PageBlock
 }> = ({ block }) => {
   const { components, mapPageUrl } = useNotionContext()
+  
+  if (navigationStyle === 'default') {
+    return <Header block={block} />
+  }
 
+  const [hasMounted, setHasMounted] = React.useState(false)
+  const { isDarkMode, toggleDarkMode } = useDarkMode()
   const onToggleDarkMode = React.useCallback(
     (e) => {
       e.preventDefault()
@@ -46,11 +52,10 @@ export const NotionPageHeader: React.FC<{
     },
     [toggleDarkMode]
   )
-  
-  if (navigationStyle === 'default') {
-    return <Header block={block} />
-  }
-
+  React.useEffect(() => {
+    setHasMounted(true)
+  }, [])
+    
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
