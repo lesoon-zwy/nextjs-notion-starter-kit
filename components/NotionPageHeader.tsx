@@ -11,6 +11,36 @@ import { useDarkMode } from '@/lib/use-dark-mode'
 
 import styles from './styles.module.css'
 
+const ToggleThemeButton = () => {
+  const [hasMounted, setHasMounted] = React.useState(false)
+  const { isDarkMode, toggleDarkMode } = useDarkMode()
+
+  React.useEffect(() => {
+    setHasMounted(true)
+  }, [])
+
+  const onToggleTheme = React.useCallback(() => {
+    toggleDarkMode()
+  }, [toggleDarkMode])
+
+  return (
+    <div
+      className={cs('breadcrumb', 'button', !hasMounted && styles.hidden)}
+      onClick={onToggleTheme}
+    >
+      {hasMounted && isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
+    </div>
+  )
+}
+
+export const NotionPageHeader: React.FC<{
+  block: types.CollectionViewPageBlock | types.PageBlock
+}> = ({ block }) => {
+  const { components, mapPageUrl } = useNotionContext()
+  
+//test
+  const [hasMounted, setHasMounted] = React.useState(false)
+  const { isDarkMode, toggleDarkMode } = useDarkMode()
 
   const onToggleDarkMode = React.useCallback(
     (e) => {
@@ -23,37 +53,7 @@ import styles from './styles.module.css'
   React.useEffect(() => {
     setHasMounted(true)
   }, [])
-
-    const [hasMounted, setHasMounted] = React.useState(false)
-  const { isDarkMode, toggleDarkMode } = useDarkMode()
-
-  
-
-  return (
-    <div
-      className={cs('breadcrumb', 'button', !hasMounted && styles.settings)}
-      onClick={onToggleTheme}
-    >
-      {hasMounted && (
-          <a
-            className={styles.toggleDarkMode}
-            href='#'
-            role='button'
-            onClick={onToggleDarkMode}
-            title='Toggle dark mode'
-          >
-            {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
-          </a>
-        )}
-    </div>
-
-  )
-}
-
-export const NotionPageHeader: React.FC<{
-  block: types.CollectionViewPageBlock | types.PageBlock
-}> = ({ block }) => {
-  const { components, mapPageUrl } = useNotionContext()
+//test end
   
   if (navigationStyle === 'default') {
     return <Header block={block} />
@@ -64,6 +64,21 @@ export const NotionPageHeader: React.FC<{
       <div className='notion-nav-header'>
         <Breadcrumbs block={block} rootOnly={true} />
 
+<div className={styles.settings}>
+        {hasMounted && (
+          <a
+            className={styles.toggleDarkMode}
+            href='#'
+            role='button'
+            onClick={onToggleDarkMode}
+            title='Toggle dark mode'
+          >
+            {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
+          </a>
+        )}
+      </div>
+
+        
         <div className='notion-nav-header-rhs breadcrumbs'>
           {navigationLinks
             ?.map((link, index) => {
@@ -94,8 +109,8 @@ export const NotionPageHeader: React.FC<{
               }
             })
             .filter(Boolean)}
-<ToggleThemeButton />
-          
+
+          <ToggleThemeButton />
 
           {isSearchEnabled && <Search block={block} title={null} />}
         </div>
