@@ -9,7 +9,6 @@ import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
 import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
-
 import styles from './styles.module.css'
 
 const ToggleThemeButton = () => {
@@ -38,13 +37,10 @@ export const NotionPageHeader: React.FC<{
   block: types.CollectionViewPageBlock | types.PageBlock
 }> = ({ block }) => {
   const { components, mapPageUrl } = useNotionContext()
-  
-  if (navigationStyle === 'default') {
-    return <Header block={block} />
-  }
 
   const [hasMounted, setHasMounted] = React.useState(false)
   const { isDarkMode, toggleDarkMode } = useDarkMode()
+
   const onToggleDarkMode = React.useCallback(
     (e) => {
       e.preventDefault()
@@ -52,10 +48,15 @@ export const NotionPageHeader: React.FC<{
     },
     [toggleDarkMode]
   )
+
   React.useEffect(() => {
     setHasMounted(true)
   }, [])
-    
+  
+  if (navigationStyle === 'default') {
+    return <Header block={block} />
+  }
+
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
@@ -92,7 +93,7 @@ export const NotionPageHeader: React.FC<{
             })
             .filter(Boolean)}
 
-          <div className={styles.settings}>
+           <div className={styles.settings}>
         {hasMounted && (
           <a
             className={styles.toggleDarkMode}
