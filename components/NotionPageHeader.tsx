@@ -11,12 +11,6 @@ import { useDarkMode } from '@/lib/use-dark-mode'
 
 import styles from './styles.module.css'
 
-  const onToggleTheme = React.useCallback(() => {
-    toggleDarkMode()
-  }, [toggleDarkMode])
-
-    const [hasMounted, setHasMounted] = React.useState(false)
-  const { isDarkMode, toggleDarkMode } = useDarkMode()
 
   const onToggleDarkMode = React.useCallback(
     (e) => {
@@ -29,18 +23,18 @@ import styles from './styles.module.css'
   React.useEffect(() => {
     setHasMounted(true)
   }, [])
+
+    const [hasMounted, setHasMounted] = React.useState(false)
+  const { isDarkMode, toggleDarkMode } = useDarkMode()
+
   
 
   return (
     <div
-      className={cs('breadcrumb', 'button', !hasMounted && styles.hidden)}
+      className={cs('breadcrumb', 'button', !hasMounted && styles.settings)}
       onClick={onToggleTheme}
     >
-      {hasMounted && isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
-    </div>
-    
-     <div className={styles.settings}>
-        {hasMounted && (
+      {hasMounted && (
           <a
             className={styles.toggleDarkMode}
             href='#'
@@ -51,7 +45,7 @@ import styles from './styles.module.css'
             {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
           </a>
         )}
-      </div>
+    </div>
 
   )
 }
