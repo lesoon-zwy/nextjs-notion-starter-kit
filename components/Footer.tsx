@@ -16,21 +16,21 @@ import styles from './styles.module.css'
 
 // TODO: merge the data and icons from PageSocial with the social links in Footer
 
-export const FooterImpl: React.FC = () => {
-  const [hasMounted, setHasMounted] = React.useState(false)
+xexport const FooterImpl: React.FC = () => {
+  /*const [hasMounted, setHasMounted] = React.useState(false)
   const { isDarkMode, toggleDarkMode } = useDarkMode()
 
-  /*const onToggleDarkMode = React.useCallback(
+ const onToggleDarkMode = React.useCallback(
     (e) => {
       e.preventDefault()
       toggleDarkMode()
     },
     [toggleDarkMode]
-  )*/
+  )
 
   React.useEffect(() => {
     setHasMounted(true)
-  }, [])
+  }, [])*/
 
   return (
     <footer className={styles.footer}>
