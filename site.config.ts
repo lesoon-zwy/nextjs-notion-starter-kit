@@ -2,15 +2,15 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: '1d665f5fb9f6421ca69721112717c5e4',
+  rootNotionPageId: 'UXD-4b51871d91864300afb8c0d67a17b2d6?pvs=13',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: '丽迅素材库',
-  domain: 'https://www.notion.so/lesoon/1d665f5fb9f6421ca69721112717c5e4',
+  name: '丽迅UXD',
+  domain: 'https://www.notion.so/lesoon/UXD-4b51871d91864300afb8c0d67a17b2d6?pvs=13',
   author: 'ZWY',
 
   // open graph metadata (optional)
