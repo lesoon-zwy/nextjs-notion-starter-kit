@@ -1,3 +1,4 @@
+import * as React from 'react'
 import siteConfig from 'site.config';
 
 const LogoElement = () => {
