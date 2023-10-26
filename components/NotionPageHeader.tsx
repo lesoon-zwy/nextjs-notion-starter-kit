@@ -37,24 +37,9 @@ export const NotionPageHeader: React.FC<{
   block: types.CollectionViewPageBlock | types.PageBlock
 }> = ({ block }) => {
   const { components, mapPageUrl } = useNotionContext()
-  
-//test
-  const [hasMounted, setHasMounted] = React.useState(false)
-  const { isDarkMode, toggleDarkMode } = useDarkMode()
 
-  const onToggleDarkMode = React.useCallback(
-    (e) => {
-      e.preventDefault()
-      toggleDarkMode()
-    },
-    [toggleDarkMode]
-  )
 
-  React.useEffect(() => {
-    setHasMounted(true)
-  }, [])
-//test end
-  
+
   if (navigationStyle === 'default') {
     return <Header block={block} />
   }
@@ -64,21 +49,9 @@ export const NotionPageHeader: React.FC<{
       <div className='notion-nav-header'>
         <Breadcrumbs block={block} rootOnly={true} />
 
-<div className={styles.settings}>
-        {hasMounted && (
-          <a
-            className={styles.toggleDarkMode}
-            href='#'
-            role='button'
-            onClick={onToggleDarkMode}
-            title='Toggle dark mode'
-          >
-            {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
-          </a>
-        )}
-      </div>
-
         
+
+
         <div className='notion-nav-header-rhs breadcrumbs'>
           {navigationLinks
             ?.map((link, index) => {
