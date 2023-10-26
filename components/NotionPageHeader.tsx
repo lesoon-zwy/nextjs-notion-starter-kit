@@ -11,6 +11,8 @@ import { useDarkMode } from '@/lib/use-dark-mode'
 
 import styles from './styles.module.css'
 
+import * as config from '@/lib/config'
+
 const ToggleThemeButton = () => {
   const [hasMounted, setHasMounted] = React.useState(false)
   const { isDarkMode, toggleDarkMode } = useDarkMode()
@@ -47,10 +49,8 @@ export const NotionPageHeader: React.FC<{
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
+        <div className='navicon'>{config.icon}</div>
         <Breadcrumbs block={block} rootOnly={true} />
-
-        
-
 
         <div className='notion-nav-header-rhs breadcrumbs'>
           {navigationLinks
