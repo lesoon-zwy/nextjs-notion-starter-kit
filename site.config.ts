@@ -9,6 +9,7 @@ export default siteConfig({
   rootNotionSpaceId: null,
 
   // basic site info (required)
+  icon: './public/navicon.svg',
   name: '丽迅UXD',
   domain: 'https://www.notion.so/lesoon/UXD-4b51871d91864300afb8c0d67a17b2d6?pvs=13',
   author: 'ZWY',
@@ -23,7 +24,6 @@ export default siteConfig({
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
-
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
   defaultPageIcon: null,
@@ -65,5 +65,5 @@ export default siteConfig({
       title: '组件库',
       pageId: 'b09bf68d89e94e75a708144bf2e6e473',
     },
-  ]
+  ],
 })
