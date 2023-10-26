@@ -47,6 +47,7 @@ export const environment = process.env.NODE_ENV || 'development'
 export const isDev = environment === 'development'
 
 // general site config
+export const icon: string = getSiteConfig('icon')
 export const name: string = getSiteConfig('name')
 export const author: string = getSiteConfig('author')
 export const domain: string = getSiteConfig('domain')
@@ -153,6 +154,7 @@ export const api = {
 // ----------------------------------------------------------------------------
 
 export const site: Site = {
+  icon,
   domain,
   name,
   rootNotionPageId,
