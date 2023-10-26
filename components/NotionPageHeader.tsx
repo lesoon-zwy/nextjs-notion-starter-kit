@@ -8,7 +8,7 @@ import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
 
 import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
-import LogoElement from '@/components/SiteLogo'
+import Logo from '@/components/SiteLogo'
 
 import styles from './styles.module.css'
 
@@ -49,7 +49,7 @@ export const NotionPageHeader: React.FC<{
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
-        <LogoElement />
+        <Logo />
         <Breadcrumbs block={block} rootOnly={true} />
 
         <div className='notion-nav-header-rhs breadcrumbs'>

@@ -1,10 +1,10 @@
 import * as React from 'react'
 import siteConfig from 'site.config';
 
-const LogoElement = () => {
+const Logo = () => {
   return (
     <img src={siteConfig.logoSrc} alt="Logo" />
   );
 }
 
-export default LogoElement;
+export default Logo;
