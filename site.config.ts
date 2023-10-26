@@ -46,16 +46,24 @@ export default siteConfig({
   // '/foo': '067dd719a912471ea9a3ac10710e7fdf',
   // '/bar': '0be6efce9daf42688f65c76b89f8eb27',
   // }
-pageUrlOverrides: null,
+  pageUrlOverrides: null,
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages
   navigationStyle: 'custom',
 
   navigationLinks: [
-  {
-       title: '设计规范',
-       pageId: '65ddb802837f47b4bfdcc009ac27bdaf',
-     },
-    ]
+    {
+      title: '设计规范',
+      pageId: '65ddb802837f47b4bfdcc009ac27bdaf',
+    },
+    {
+      title: '素材库',
+      pageId: '5ffc5b51171648c18baf7b7a0977f859',
+    },
+    {
+      title: '组件库',
+      pageId: 'b09bf68d89e94e75a708144bf2e6e473',
+    },
+  ]
 })
