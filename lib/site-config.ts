@@ -4,7 +4,7 @@ export interface SiteConfig {
   rootNotionPageId: string
   rootNotionSpaceId?: string
 
-  Logo: Array<LogoSrc>
+  logoSrc: string
   name: string
   domain: string
   author: string
@@ -40,10 +40,6 @@ export interface NavigationLink {
   title: string
   pageId?: string
   url?: string
-}
-
-export interface LogoSrc {
-  src: string
 }
 
 export const siteConfig = (config: SiteConfig): SiteConfig => {

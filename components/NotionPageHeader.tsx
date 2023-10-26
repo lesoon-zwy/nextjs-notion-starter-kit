@@ -6,8 +6,9 @@ import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 import cs from 'classnames'
 import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
 
-import { isSearchEnabled, navigationLinks, navigationStyle, Logo } from '@/lib/config'
+import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
+import { LogoElement } from '@/lib/get-site-logo'
 
 import styles from './styles.module.css'
 
@@ -48,48 +49,37 @@ export const NotionPageHeader: React.FC<{
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
-        <div className='sitelogo'>
-          {Logo ?.map((src) => {
-              if (src) {
-                return (
-                  <components.PageLink
-                    src={(src)}
-                  >
-                  </components.PageLink>
-                )
-              } 
-            })
-            .filter(Boolean)}</div>
+        <LogoElement />
         <Breadcrumbs block={block} rootOnly={true} />
 
         <div className='notion-nav-header-rhs breadcrumbs'>
-          {navigationLinks ?.map((link, index) => {
-              if (!link.pageId && !link.url) {
-                return null
-              }
+          {navigationLinks?.map((link, index) => {
+            if (!link.pageId && !link.url) {
+              return null
+            }
 
-              if (link.pageId) {
-                return (
-                  <components.PageLink
-                    href={mapPageUrl(link.pageId)}
-                    key={index}
-                    className={cs(styles.navLink, 'breadcrumb', 'button')}
-                  >
-                    {link.title}
-                  </components.PageLink>
-                )
-              } else {
-                return (
-                  <components.Link
-                    href={link.url}
-                    key={index}
-                    className={cs(styles.navLink, 'breadcrumb', 'button')}
-                  >
-                    {link.title}
-                  </components.Link>
-                )
-              }
-            })
+            if (link.pageId) {
+              return (
+                <components.PageLink
+                  href={mapPageUrl(link.pageId)}
+                  key={index}
+                  className={cs(styles.navLink, 'breadcrumb', 'button')}
+                >
+                  {link.title}
+                </components.PageLink>
+              )
+            } else {
+              return (
+                <components.Link
+                  href={link.url}
+                  key={index}
+                  className={cs(styles.navLink, 'breadcrumb', 'button')}
+                >
+                  {link.title}
+                </components.Link>
+              )
+            }
+          })
             .filter(Boolean)}
 
           <ToggleThemeButton />

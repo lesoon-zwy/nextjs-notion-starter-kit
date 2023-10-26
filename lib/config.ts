@@ -8,7 +8,7 @@ import { parsePageId } from 'notion-utils'
 import { PostHogConfig } from 'posthog-js'
 
 import { getEnv, getSiteConfig } from './get-config-value'
-import { NavigationLink, LogoSrc } from './site-config'
+import { NavigationLink } from './site-config'
 import { NavigationStyle, PageUrlOverridesInverseMap, PageUrlOverridesMap, Site } from './types'
 
 export const rootNotionPageId: string = parsePageId(
@@ -101,11 +101,6 @@ export const navigationStyle: NavigationStyle = getSiteConfig(
 
 export const navigationLinks: Array<NavigationLink | null> = getSiteConfig(
   'navigationLinks',
-  null
-)
-
-export const Logo: Array<LogoSrc | null> = getSiteConfig(
-  'Logo',
   null
 )
 
