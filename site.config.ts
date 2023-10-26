@@ -44,17 +44,18 @@ export default siteConfig({
   //
 pageUrlOverrides: {
 '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-'/bar': '0be6efce9daf42688f65c76b89f8eb27'
+'/bar': '0be6efce9daf42688f65c76b89f8eb27',
 }
   //pageUrlOverrides: null,
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages
   navigationStyle: 'default',
+
   navigationLinks: [
   {
        title: '设计规范',
-       pageId: 'c72458724345427b8744bdaf199a5750'
+       pageId: '65ddb802837f47b4bfdcc009ac27bdaf',
      },
     ]
 })
