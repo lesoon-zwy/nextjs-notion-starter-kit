@@ -4,7 +4,7 @@ export interface SiteConfig {
   rootNotionPageId: string
   rootNotionSpaceId?: string
 
-  icon: string
+  logo: string
   name: string
   domain: string
   author: string
