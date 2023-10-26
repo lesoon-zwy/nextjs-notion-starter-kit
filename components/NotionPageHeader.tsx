@@ -8,7 +8,7 @@ import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
 
 import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
-import { LogoElement } from '@/lib/get-site-logo'
+import LogoElement from '@/components/SiteLogo'
 
 import styles from './styles.module.css'
 
