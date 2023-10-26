@@ -8,13 +8,8 @@ import { parsePageId } from 'notion-utils'
 import { PostHogConfig } from 'posthog-js'
 
 import { getEnv, getSiteConfig } from './get-config-value'
-import { NavigationLink } from './site-config'
-import {
-  NavigationStyle,
-  PageUrlOverridesInverseMap,
-  PageUrlOverridesMap,
-  Site
-} from './types'
+import { NavigationLink, LogoSrc } from './site-config'
+import { NavigationStyle, PageUrlOverridesInverseMap, PageUrlOverridesMap, Site } from './types'
 
 export const rootNotionPageId: string = parsePageId(
   getSiteConfig('rootNotionPageId'),
@@ -47,7 +42,6 @@ export const environment = process.env.NODE_ENV || 'development'
 export const isDev = environment === 'development'
 
 // general site config
-export const logo: string = getSiteConfig('logo')
 export const name: string = getSiteConfig('name')
 export const author: string = getSiteConfig('author')
 export const domain: string = getSiteConfig('domain')
@@ -110,6 +104,11 @@ export const navigationLinks: Array<NavigationLink | null> = getSiteConfig(
   null
 )
 
+export const Logo: Array<LogoSrc | null> = getSiteConfig(
+  'Logo',
+  null
+)
+
 // Optional site search
 export const isSearchEnabled: boolean = getSiteConfig('isSearchEnabled', true)
 
@@ -154,7 +153,6 @@ export const api = {
 // ----------------------------------------------------------------------------
 
 export const site: Site = {
-  logo,
   domain,
   name,
   rootNotionPageId,

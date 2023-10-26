@@ -22,7 +22,6 @@ export interface Params extends ParsedUrlQuery {
 }
 
 export interface Site {
-  logo: string
   name: string
   domain: string
 

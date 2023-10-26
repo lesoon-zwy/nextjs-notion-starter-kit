@@ -6,7 +6,7 @@ import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 import cs from 'classnames'
 import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
 
-import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
+import { isSearchEnabled, navigationLinks, navigationStyle, Logo } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import styles from './styles.module.css'
@@ -48,14 +48,22 @@ export const NotionPageHeader: React.FC<{
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
-      <div className="logo">
-        <img src="{logo}" alt="Logo" />
-      </div>
+        <div className='sitelogo'>
+          {Logo ?.map((src) => {
+              if (src) {
+                return (
+                  <components.PageLink
+                    src={(src)}
+                  >
+                  </components.PageLink>
+                )
+              } 
+            })
+            .filter(Boolean)}</div>
         <Breadcrumbs block={block} rootOnly={true} />
 
         <div className='notion-nav-header-rhs breadcrumbs'>
-          {navigationLinks
-            ?.map((link, index) => {
+          {navigationLinks ?.map((link, index) => {
               if (!link.pageId && !link.url) {
                 return null
               }
