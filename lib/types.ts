@@ -70,7 +70,3 @@ export interface NotionPageInfo {
   authorImage: string
   detail: string
 }
-
-export interface Logo {
-  width: string
-}
