@@ -20,19 +20,19 @@ export const getStaticProps = async () => {
 }
 
 export default function NotionDomainPage(props) {
-  const router = useRouter();
-  const isIndexPage = router.pathname === '/';
-  
-  return <NotionPage {...props}>
-  {isIndexPage ? (
-        // Conditionally hide elements with the "notion-page-link" class
-        React.Children.map(props.children, (child) => {
-          if (React.isValidElement(child) && child.props.className === 'notion-page-link') {
-            return null; // Hide elements with the specified class
-          }
-          return child;
-        })
-      ) : null}
-      </NotionPage>
+  return (
+    <div>
+      <NotionPage {...props} />
+      {props.children}
+      {props.router.pathname === '/' && (
+        <style>
+          {`
+            .notion-page-link {
+              display: none;
+            }
+          `}
+        </style>
+      )}
+    </div>
+  );
 }
-
