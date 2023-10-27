@@ -18,6 +18,18 @@ export const getStaticProps = async () => {
   }
 }
 
+//export default function NotionDomainPage(props) {
+//  return <NotionPage {...props} />
+//}
+
 export default function NotionDomainPage(props) {
-  return <NotionPage {...props} />
+  // You can add your own custom content here
+  return (
+    <div>
+      <h1>Your Custom Page</h1>
+      <p>This is your custom content.</p>
+      <NotionPage {...props} />
+      {/* You can add more custom components or content here */}
+    </div>
+  );
 }
