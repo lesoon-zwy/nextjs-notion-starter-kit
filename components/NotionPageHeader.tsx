@@ -49,7 +49,7 @@ export const NotionPageHeader: React.FC<{
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
-        <Logo width='100vw'/>
+        <Logo />
         <Breadcrumbs block={block} rootOnly={false} />
 
         <div className='notion-nav-header-rhs breadcrumbs'>

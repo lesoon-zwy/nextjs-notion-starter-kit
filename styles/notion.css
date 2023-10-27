@@ -2361,6 +2361,10 @@ svg.notion-page-icon {
   gap: 12px;
 }
 
+.notion-header .notion-nav-header img {
+  width: 100vw;
+}
+
 .notion-header .breadcrumbs {
   display: flex;
   flex-direction: row;
