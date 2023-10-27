@@ -18,18 +18,16 @@ export const getStaticProps = async () => {
   }
 }
 
-//export default function NotionDomainPage(props) {
-//  return <NotionPage {...props} />
-//}
-
 export default function NotionDomainPage(props) {
-  // You can add your own custom content here
-  return (
-    <div>
-      <h1>Your Custom Page</h1>
-      <p>This is your custom content.</p>
-      <NotionPage {...props} />
-      {/* You can add more custom components or content here */}
-    </div>
-  );
+  return <NotionPage {...props}>
+  {isIndexPage ? (
+        // Conditionally hide elements with the "notion-page-link" class
+        React.Children.map(props.children, (child) => {
+          if (React.isValidElement(child) && child.props.className === 'notion-page-link') {
+            return null; // Hide elements with the specified class
+          }
+          return child;
+        })
+      ) : null}
+      </NotionPage>
 }
