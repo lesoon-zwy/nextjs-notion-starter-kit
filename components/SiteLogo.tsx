@@ -3,7 +3,7 @@ import siteConfig from 'site.config';
 
 const Logo = () => {
   return (
-    <img src={siteConfig.logoSrc} height="10rem" alt="Logo" />
+    <img src={siteConfig.logoSrc} height="40rem" alt="Logo" />
   );
 }
 
