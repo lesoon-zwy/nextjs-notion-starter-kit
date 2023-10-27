@@ -14,14 +14,11 @@ export const getStaticProps = async () => {
   }
 };
 
-type ChildWithClassName = React.ReactElement<{ className?: string }>;
-
 export default function NotionDomainPage(props) {
   // Function to manipulate the content to hide the specified elements
-  const manipulateContent = (content: ChildWithClassName[]) => {
-    // Clone the content, applying the desired logic
+  const manipulateContent = (content) => {
     const modifiedContent = content.map((child) => {
-      if (child.props.className === 'notion-page-link') {
+      if (React.isValidElement(child) && child.type === 'a' && child.props.className === 'notion-page-link') {
         // Hide <a> tags with class name 'notion-page-link'
         return React.cloneElement(child, { style: { display: 'none' } });
       }
