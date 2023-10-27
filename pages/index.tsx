@@ -20,18 +20,8 @@ export const getStaticProps = async () => {
 
 export default function NotionDomainPage(props) {
   return (
-    <div>
+
       <NotionPage {...props} />
-      {props.children}
-      {props.router.pathname === '/' && (
-        <style>
-          {`
-            .notion-page-link {
-              display: none;
-            }
-          `}
-        </style>
-      )}
-    </div>
+
   );
 }
