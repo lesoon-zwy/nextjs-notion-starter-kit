@@ -3,7 +3,7 @@ import siteConfig from 'site.config';
 
 const Logo = () => {
   return (
-    <img src={siteConfig.logoSrc} height="20rem" alt="Logo"><a url={siteConfig.domain} /></img>
+    <img src={siteConfig.logoSrc} height="20rem" href={siteConfig.domain} alt="Logo"><a href={siteConfig.domain} /></img>
   );
 }
 
