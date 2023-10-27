@@ -1194,7 +1194,7 @@ svg.notion-page-icon {
   width: 100%;
 }
 
-/*.notion-toggle {
+.notion-toggle {
   width: 100%;
   padding: 3px 2px;
 }
@@ -1204,7 +1204,7 @@ svg.notion-page-icon {
 }
 .notion-toggle > div {
   margin-left: 1.1em;
-}*/
+}
 
 .notion-page-content>.notion-page-content-inner>.notion-row>.notion-column:first-child .notion-toggle {
   display: none;
