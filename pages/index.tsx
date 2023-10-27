@@ -3,6 +3,7 @@ import * as React from 'react'
 import { NotionPage } from '@/components/NotionPage'
 import { domain } from '@/lib/config'
 import { resolveNotionPage } from '@/lib/resolve-notion-page'
+import { useRouter } from 'next/router';
 
 export const getStaticProps = async () => {
   try {
@@ -19,6 +20,9 @@ export const getStaticProps = async () => {
 }
 
 export default function NotionDomainPage(props) {
+  const router = useRouter();
+  const isIndexPage = router.pathname === '/';
+  
   return <NotionPage {...props}>
   {isIndexPage ? (
         // Conditionally hide elements with the "notion-page-link" class
@@ -31,3 +35,4 @@ export default function NotionDomainPage(props) {
       ) : null}
       </NotionPage>
 }
+
