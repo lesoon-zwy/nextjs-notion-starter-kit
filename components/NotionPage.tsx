@@ -19,7 +19,6 @@ import { getCanonicalPageUrl, mapPageUrl } from '@/lib/map-page-url'
 import { searchNotion } from '@/lib/search-notion'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
-//import { Breadcrumbs } from 'react-notion-x'
 import { Footer } from './Footer'
 import { Loading } from './Loading'
 import { NotionPageHeader } from './NotionPageHeader'
@@ -277,7 +276,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapPageUrl={siteMapPageUrl}
         mapImageUrl={mapImageUrl}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
-        //Breadcrumbs={Breadcrumbs}
         pageAside={pageAside}
         footer={footer}
       />

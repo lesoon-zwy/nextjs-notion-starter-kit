@@ -2346,7 +2346,7 @@ svg.notion-page-icon {
 }
 
 .notion-header .notion-nav-header {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -2367,7 +2367,7 @@ svg.notion-page-icon {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 100%;
+  height: auto;
   flex-grow: 0;
   min-width: 0;
 }
